@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1, #div2, #div3{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+     <!-- Password Strength Checker: -->
+    <input type="password" id="ip1" placeholder="enter your password"> <br>
+   <div id="div1" style="color: greenyellow;" >strong password</div>
+   <div id="div2" style="color:orange ;">medium password</div>
+   <div id="div3" style="color: red;">weak password</div>
+   <button id="btn">submit</button>
+
+
+
+
+   
+    
+    <script>
+      let ipu=document.getElementById("ip1");
+      let btn=document.getElementById("btn");
+      let div1=document.getElementById("div1");
+      let div2=document.getElementById("div2");
+      let div3=document.getElementById("div3");
+      btn.addEventListener("click" , function() {
+         
+       
+        if (ipu.value.length<5) {
+            div3.style.display="block";
+            div1.style.display="none";
+            div2.style.display="none";
+        }
+        else if(ipu.value.length<8) {
+            div2.style.display="block";
+            div3.style.display="none";
+            div1.style.display="none";
+        }
+        else{
+            div1.style.display="block";
+            div2.style.display="none";
+            div3.style.display="none";
+        }
+         console.log(ipu.value);
+         ipu.value=""
+          
+      })
+      
+      
+
+    </script>
+
+</body>
+</html>

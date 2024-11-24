@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="result" ><br>
+    <input type="text" id="inp1" placeholder="enter a first number"><br>
+    <input type="text" id="inp2" placeholder="enter a second number"><br>
+    <button id="btn1">+</button>
+    <button id="btn2">-</button>
+    <button id="btn3">*</button>
+    <button id="btn4">/</button>
+    <script>
+        let inp11=document.getElementById("inp1");
+        let inp22=document.getElementById("inp2");
+
+        let btn11=document.getElementById("btn1");
+        btn11.addEventListener("click", function(){
+            let inp11=document.getElementById("inp1");
+            let inp22=document.getElementById("inp2");
+            let result = Number(inp11.value) + Number(inp22.value);
+            document.getElementById('result').value = result;
+            console.log(result)
+
+            
+            inp11.value="";
+            inp22.value="";
+        })
+        
+        let btn22=document.getElementById("btn2");
+        btn22.addEventListener("click", function(){
+            let inp11=document.getElementById("inp1");
+            let inp22=document.getElementById("inp2");
+            let result = Number(inp11.value) - Number(inp22.value);
+            document.getElementById('result').value = result;
+            console.log(result)
+
+            
+            inp11.value="";
+            inp22.value="";
+        })
+
+        let btn33=document.getElementById("btn3");
+        btn33.addEventListener("click", function(){
+            let inp11=document.getElementById("inp1");
+            let inp22=document.getElementById("inp2");
+            let result = Number(inp11.value) *  Number(inp22.value);
+            document.getElementById('result').value = result;
+            console.log(result)
+
+            
+            inp11.value="";
+            inp22.value="";
+           
+        })
+        let btn44=document.getElementById("btn4");
+        btn44.addEventListener("click", function(){
+            let inp11=document.getElementById("inp1");
+            let inp22=document.getElementById("inp2");
+            let result = Number(inp11.value) /  Number(inp22.value);
+            document.getElementById('result').value = result;
+            console.log(result)
+
+            
+            inp11.value="";
+            inp22.value="";
+        })
+       
+
+      
+    </script>
+
+</body>
+</html>
